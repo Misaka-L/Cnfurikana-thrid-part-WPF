@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+  <resx key="PhoneticSymbol" value="Character"/>
+  <resx key="ImportFile" value="Import file"/>
+  <resx key="Settings" value="Settings"/>
+  <resx key="SelectFileForImport" value="Select file for import (*.txt)"/>
+  <resx key="ExportFile" value="Export file"/>
+  <resx key="SelectPathForExport" value="Select path for export"/>
+  <resx key="Languages" value="Languages"/>
+  <resx key="Back" value="Back"/>
+  <resx key="SettingCnfurikanaLanguages" value="Change Cnfurikana display languages"/>
+  <resx key="SettingCnfurikanaCharacter" value="Change Cnfurikana character settings"/>
+  <resx key="Sorry" value="Sorry"/>
+  <resx key="CnfurikanaCrush" value="An error occurred in the Cnfurikana WPF"/>
+  <resx key="PleaseProvideInformationToTechnician" value="If you need help, please provide the following information to the technician."/>
+  <resx key="ErrorMessage" value="Error Message"/>
+  <resx key="ErrorStackTrace" value="StackTrace"/>
+  <resx key="Copy" value="Copy"/>
+</localization>

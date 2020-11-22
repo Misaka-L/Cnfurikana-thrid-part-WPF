@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+  <resx key="PhoneticSymbol" value="注音"/>
+  <resx key="ImportFile" value="导入文档"/>
+  <resx key="Settings" value="设置"/>
+  <resx key="SelectFileForImport" value="选择导入的 TXT 文档"/>
+  <resx key="ExportFile" value="导出文档"/>
+  <resx key="SelectPathForExport" value="选择导出文件路径"/>
+  <resx key="Languages" value="语言"/>
+  <resx key="Back" value="返回"/>
+  <resx key="SettingCnfurikanaLanguages" value="修改 Cnfurikana 的显示语言"/>
+  <resx key="SettingCnfurikanaCharacter" value="修改 Cnfurikana 的注音设置"/>
+  <resx key="Sorry" value="非常抱歉"/>
+  <resx key="CnfurikanaCrush" value="Cnfurikana WPF 发生了一个错误"/>
+  <resx key="PleaseProvideInformationToTechnician" value="如需获取帮助，请向技术人员提供以下信息"/>
+  <resx key="ErrorMessage" value="错误信息"/>
+  <resx key="ErrorStackTrace" value="调用堆栈"/>
+  <resx key="Copy" value="复制"/>
+</localization>
