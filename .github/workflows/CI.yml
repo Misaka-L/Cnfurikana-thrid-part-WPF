@@ -1,0 +1,50 @@
+name: CI
+
+on:
+    pull_request:
+        types: [assigned, opened, synchronize, reopened]
+    pull_request_review:
+        types: [edited, dismissed]
+    pull_request_review_comment:
+        types: [created, deleted]
+    push:
+
+jobs:
+    build:
+        runs-on: windows-latest
+
+        env:
+            Solution_Name: ./Cnfurikana-thrid-part-WPF.sln
+            Configuration: Release
+            Platform: Any CPU
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+
+            - name: Setup MSBuild.exe
+              uses: microsoft/setup-msbuild@v1.0.2
+              
+            - name: Cache nuget packages
+              id: cache-nuget
+              uses: actions/cache@v2
+              with:
+                  path: ~/.nuget/packages
+                  key: ${{ runner.os }}-nuget-${{ hashFiles('**/Pixeval.csproj') }}
+                  restore-keys: |
+                      ${{ runner.os }}-nuget-
+            
+            
+            - name: Restore the application
+              run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration /m
+
+            - name: Build the application
+              run: msbuild $env:Solution_Name /t:build /p:Configuration=$env:Configuration /p:Platform=$env:Platform /m
+              
+            - name: Upload a Build Artifact
+              uses: actions/upload-artifact@v2
+              with:
+                  name: Cnfurikana
+                  path: "./bin/Release/*.exe"
